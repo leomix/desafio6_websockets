@@ -1,0 +1,25 @@
+<div class="jumbotron">
+    <h1>Chat</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="formChat" onsubmit="return enviarChat();">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <input name="mensaje" id="mensaje" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button id="btnEnviar" type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <div id="chat"></div>
+            </div>
+        </div>
+    </div>
+</div>

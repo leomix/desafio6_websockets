@@ -1,0 +1,32 @@
+<%-include('./partials/header')%>
+
+<a href="/">
+    <button type="button" class="btn btn-primary float-right">Formulario</button>
+</a>
+<h1 style="color: blue">Vista de Productos</h1>
+<br>
+
+<% if(productos){ %>
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color:yellow">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Foto</th>
+            </tr>
+            <%  for (let producto of productos){ %>
+            <tr>
+                <td><%=producto.id%></td>
+                <td><%=producto.nombre%></td>
+                <td><%=producto.precio%></td>
+                <td><img src="<%=producto.url%>" alt="" width="100px"></td>
+            </tr>
+            <% } %>     
+        </table>
+    </div>
+<% }else{  %>
+    <h3 class="alert alert-warning">No se encontraron productos</h3>
+<% } %>
+
+<%- include('./partials/footer') %> 
