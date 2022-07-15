@@ -1,14 +1,14 @@
 {{#if chat.length }}
     <table class="table">
             <tr>
-                <th>Registro</th>
                 <th>Email</th>
+                <th>Hora</th>
                 <th>Mensaje</th>
             </tr>
             {{#each chat}}
             <tr>
-                <td style="color:blue"><b>{{this.fecha}}</b></td>
-                <td style="color:maroon">{{this.email}}</td>
+                <td style="color:blue"><b>{{this.email}}</b></td>
+                <td style="color:maroon">{{this.fecha}}</td>
                 <td style="color:green"><em>{{this.mensaje}}</em></td>
             </tr>
             {{/each}}
